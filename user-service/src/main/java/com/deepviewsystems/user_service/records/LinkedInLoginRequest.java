@@ -7,7 +7,7 @@ import jakarta.validation.constraints.NotBlank;
  * Ejemplo de cómo agregar una nueva estrategia de autenticación
  */
 public record LinkedInLoginRequest(
-    @NotBlank(message = "El token de LinkedIn es requerido")
+    @NotBlank(message = "{validation.token.required}")
     String linkedinToken
 ) {
 } 

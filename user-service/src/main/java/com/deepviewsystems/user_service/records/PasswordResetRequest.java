@@ -4,7 +4,7 @@ import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 
 public record PasswordResetRequest(
-    @NotBlank(message = "El email es requerido")
-    @Email(message = "Formato de email inválido")
+    @NotBlank(message = "{validation.email.required}")
+    @Email(message = "{validation.email.invalid}")
     String email
 ) {} 
