@@ -1,6 +1,7 @@
 name: Java CI with Maven
 
 on:
+  workflow_dispatch:
   push:
     branches: [ "main", "develop" ]
   pull_request:
@@ -51,4 +52,4 @@ jobs:
         with:
           name: user-service-jar
           path: target/*.jar
-          retention-days: 7 
+          retention-days: 7
