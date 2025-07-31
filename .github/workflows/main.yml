@@ -36,15 +36,13 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ~/.m2
-          key: ${{ runner.os }}-m2-${{ hashFiles('user-service/pom.xml') }}
+          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
 
-      - name: Run tests
-        working-directory: user-service
-        run: mvn clean test -Dspring.profiles.active=test
+      - name: Run tests (unit + integration)
+        run: mvn verify -Dspring.profiles.active=test
 
-      - name: Build with Maven
-        working-directory: user-service
+      - name: Build with Maven (skip tests)
         run: mvn clean package -DskipTests
 
       - name: Upload test results
@@ -52,7 +50,9 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: test-results
-          path: user-service/target/surefire-reports/
+          path: |
+            target/surefire-reports/
+            target/failsafe-reports/
           retention-days: 7
 
       - name: Upload build artifacts
@@ -60,5 +60,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: user-service-jar
-          path: user-service/target/*.jar
-          retention-days: 72
+          path: target/*.jar
+          retention-days: 7
