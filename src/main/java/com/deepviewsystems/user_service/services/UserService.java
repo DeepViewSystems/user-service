@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
-@Service
 public interface UserService extends UserDetailsService {
 
     Optional<User> findByEmail(String email);

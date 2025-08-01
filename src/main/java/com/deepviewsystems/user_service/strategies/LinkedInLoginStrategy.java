@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 /**
  * Interfaz para la estrategia de login con LinkedIn OAuth
  */
-@Service
 public interface LinkedInLoginStrategy {
 
     /**

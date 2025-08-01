@@ -3,7 +3,6 @@ package com.deepviewsystems.user_service.services;
 import com.deepviewsystems.user_service.entities.User;
 import org.springframework.stereotype.Service;
 
-@Service
 public interface JwtTokenService {
 
     String generateAccessToken(User user);

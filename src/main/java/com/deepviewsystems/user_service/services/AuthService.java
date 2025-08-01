@@ -6,7 +6,6 @@ import com.deepviewsystems.user_service.records.LoginRequest;
 import com.deepviewsystems.user_service.records.RegisterUserRequest;
 import org.springframework.stereotype.Service;
 
-@Service
 public interface AuthService {
 
     AuthResponse login(LoginRequest request);

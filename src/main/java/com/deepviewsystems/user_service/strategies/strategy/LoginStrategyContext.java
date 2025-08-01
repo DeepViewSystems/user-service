@@ -8,7 +8,6 @@ import java.util.List;
 /**
  * Interfaz del contexto del patrón Strategy que maneja diferentes tipos de autenticación
  */
-@Service
 public interface LoginStrategyContext {
 
     /**

@@ -6,7 +6,6 @@ import org.springframework.stereotype.Service;
 /**
  * Interfaz del patrón Strategy para diferentes tipos de autenticación
  */
-@Service
 public interface LoginStrategy {
 
     /**

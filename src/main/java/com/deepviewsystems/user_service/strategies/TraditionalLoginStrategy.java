@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 /**
  * Interfaz para la estrategia de login tradicional con email y contraseña
  */
-@Service
 public interface TraditionalLoginStrategy {
 
     /**

@@ -4,7 +4,6 @@ import com.deepviewsystems.user_service.records.ChangePasswordRequest;
 import com.deepviewsystems.user_service.records.PasswordResetRequest;
 import org.springframework.stereotype.Service;
 
-@Service
 public interface PasswordResetService {
 
     void requestPasswordReset(PasswordResetRequest request);

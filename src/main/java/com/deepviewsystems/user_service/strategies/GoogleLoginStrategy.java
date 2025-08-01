@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 /**
  * Interfaz para la estrategia de login con Google OAuth
  */
-@Service
 public interface GoogleLoginStrategy {
     /**
      * Ejecuta la autenticación con Google OAuth
